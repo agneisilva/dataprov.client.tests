@@ -1,0 +1,343 @@
+@prefix arctos.database.museum: <http://arctos.database.museum/> .
+@prefix bioprov: <http://bioprov.org/> .
+@prefix bioprov.poli: <http://bioprov.poli.usp.br> .
+@prefix cefa.dri.edu: <http://www.cefa.dri.edu/> .
+@prefix dbpedia: <http://dbpedia.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix desp.ucdavis.edu: <http://desp.ucdavis.edu/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix homepages.inf.ed.ac.uk: <http://homepages.inf.ed.ac.uk/> .
+@prefix ib_usp: <http://ib.usp.br/> .
+@prefix manisnet.org: <http://manisnet.org/> .
+@prefix ns1: <http://bioprov.poli.usp.br/terms/> .
+@prefix orcid: <http://orcid.org/> .
+@prefix poli: <http://poli.usp.br/> .
+@prefix prism.oregonstate.edu: <http://www.prism.oregonstate.edu/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sensor.com: <http://sensor.com/> .
+@prefix teste: <http://teste.com/> .
+@prefix tools.com: <http://tools.com/> .
+@prefix usp: <http://usp.br/> .
+@prefix worldclim: <http://worldclim.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bioprov.poli.usp.br/mapmodels/Urocitellus_beldingi> a prov:Entity ;
+    dcterms:created "2016-09-05 11:22:02" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/ex1_oBeech_modern_randomBg_r/Urocitellus_beldingi_map_modern.tif" ;
+    dcterms:title "Raster Map of Species Prediction" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529>,
+        <http://bioprov.poli.usp.br/agents/8788438> ;
+    prov:wasDerivedFrom <http://bioprov.poli.usp.br/model/Urocitellus_beldingi> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/act/prediction1> .
+
+arctos.database.museum: a prov:Entity ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    dcterms:description "Arctos is both a community and a comprehensive collection management information system. " ;
+    dcterms:source "http://arctos.database.museum/" ;
+    dcterms:title "Collaborative Collection Management Solution" ;
+    dcterms:type "Software" .
+
+<http://bioprov.poli.usp.br/act/analysing1> a prov:Activity ;
+    ns1:eventType "dataAnalysing" ;
+    dcterms:created "2016-09-05 11:21:54" ;
+    dcterms:title "Species Distribution Modeling" ;
+    dcterms:type "Event" ;
+    prov:used <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_xy>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio02>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio03>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio05>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio06>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio07>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio13>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio14>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio15>,
+        <http://bioprov.poli.usp.br/map/bioclim_bio18>,
+        <http://bioprov.poli.usp.br/param/aow>,
+        <http://bioprov.poli.usp.br/param/bm>,
+        <http://bioprov.poli.usp.br/param/hinge>,
+        <http://bioprov.poli.usp.br/param/jn>,
+        <http://bioprov.poli.usp.br/param/linear>,
+        <http://bioprov.poli.usp.br/param/product>,
+        <http://bioprov.poli.usp.br/param/quad>,
+        <http://bioprov.poli.usp.br/param/rc>,
+        <http://bioprov.poli.usp.br/param/rtp>,
+        <http://bioprov.poli.usp.br/param/thld>,
+        <http://bioprov.poli.usp.br/param/threads>,
+        <https://cran.r-project.org/web/packages/dismo/>,
+        <https://www.cs.princeton.edu/~schapire/maxent/> .
+
+<http://bioprov.poli.usp.br/act/cleaning1> a prov:Activity ;
+    ns1:eventType "dataCleaning" ;
+    dcterms:created "2016-09-05 11:19:44" ;
+    dcterms:description "Cleaning Criteria: https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/ex1_oBeech_modern_randomBg_r/data_cleaning_criteria.txt" ;
+    dcterms:title "Cleaning Occurrence Records based in described criteria." ;
+    dcterms:type "Event" ;
+    prov:wasInformedBy <http://bioprov.poli.usp.br/act/merging1> .
+
+<http://bioprov.poli.usp.br/act/merging1> a prov:Activity ;
+    ns1:eventType "dataMerging" ;
+    dcterms:created "2016-09-05 11:19:44" ;
+    dcterms:title "Merging Occurrence Records from ARCTOS and MANIS" ;
+    dcterms:type "Event" ;
+    prov:used <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_arctos>,
+        <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_manis> .
+
+<http://bioprov.poli.usp.br/act/prediction1> a prov:Activity ;
+    ns1:eventType "dataPrediction" ;
+    dcterms:created "2016-09-05 11:22:02" ;
+    dcterms:title "Prediction based on the Distribution Model" ;
+    dcterms:type "Event" ;
+    prov:used <http://bioprov.poli.usp.br/model/Urocitellus_beldingi> .
+
+<http://bioprov.poli.usp.br/act/retrieving1> a prov:Activity ;
+    ns1:eventType "dataRetrieving" ;
+    dcterms:created "2016-09-05 11:19:44" ;
+    dcterms:title "Retrieving Occurrence Records from ARCTOS Portal" ;
+    dcterms:type "Event" ;
+    prov:used arctos.database.museum:,
+        <http://bioprov.poli.usp.br/param/edate>,
+        <http://bioprov.poli.usp.br/param/sdate>,
+        <http://bioprov.poli.usp.br/param/species> .
+
+<http://bioprov.poli.usp.br/act/retrieving2> a prov:Activity ;
+    ns1:eventType "dataRetrieving" ;
+    dcterms:created "2016-09-05 11:19:44" ;
+    dcterms:title "Retrieving Occurrence Records from MANIS Portal" ;
+    dcterms:type "Event" ;
+    prov:used <http://bioprov.poli.usp.br/param/edate>,
+        <http://bioprov.poli.usp.br/param/sdate>,
+        <http://bioprov.poli.usp.br/param/species>,
+        manisnet.org: .
+
+<http://bioprov.poli.usp.br/agents/8788438> a prov:Agent ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    rdfs:seeAlso <http://orcid.org/0000-0003-4627-0244> ;
+    foaf:mbox <mailto:andrefmb@usp.br> ;
+    foaf:name "Andre Filipe de Moraes Batista" .
+
+<http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_xy> a prov:Entity ;
+    dcterms:created "2016-09-05 11:19:44" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/speciesRecords/Urocitellus_beldingi_training_modern_xy.csv" ;
+    dcterms:title "Occurrence file of the Urocitellus_beldingi species." ;
+    dcterms:type "Dataset" ;
+    prov:wasDerivedFrom <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_arctos>,
+        <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_manis> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/act/cleaning1> .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio02> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:48" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO02.asc" ;
+    dcterms:title "Mean diurnal temperature range" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio03> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:49" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO03.asc" ;
+    dcterms:title "Isothermality (BIO2/BIO07)" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio05> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:48" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO05.asc" ;
+    dcterms:title "Maximum temperature of the warmest month" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio06> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:48" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO06.asc" ;
+    dcterms:title "Minimum temperature of the coldest month" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio07> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:49" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO07.asc" ;
+    dcterms:title "Temperature annual range (BIO05-BIO06)" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio13> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:49" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO13.asc" ;
+    dcterms:title "Precipitation of Wettest Month" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio14> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:49" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO14.asc" ;
+    dcterms:title "Precipitation of Driest Month" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio15> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:49" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO15.asc" ;
+    dcterms:title "Precipitation Seasonality (Coefficient of Variation)" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/map/bioclim_bio18> a prov:Entity ;
+    ns1:dataType "Map" ;
+    dcterms:created "2016-09-05 11:19:49" ;
+    dcterms:description "Resolution=800m" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO18.asc" ;
+    dcterms:title "Precipitation of Warmest Quarter" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo prism.oregonstate.edu: .
+
+<http://bioprov.poli.usp.br/param/aow> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:53" ;
+    dcterms:type "InputParam" ;
+    rdf:value "false" .
+
+<http://bioprov.poli.usp.br/param/bm> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:52" ;
+    dcterms:type "InputParam" ;
+    rdf:value "1" .
+
+<http://bioprov.poli.usp.br/param/hinge> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:53" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/jn> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:53" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/linear> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:52" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/product> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:52" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/quad> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:52" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/rc> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:53" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/rtp> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:52" ;
+    dcterms:type "InputParam" ;
+    rdf:value "30" .
+
+<http://bioprov.poli.usp.br/param/thld> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:52" ;
+    dcterms:type "InputParam" ;
+    rdf:value "true" .
+
+<http://bioprov.poli.usp.br/param/threads> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:53" ;
+    dcterms:type "InputParam" ;
+    rdf:value "2" .
+
+manisnet.org: a prov:Entity ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    dcterms:description "Information System developed by seventeen North American institutions with support from NSF." ;
+    dcterms:source "http://manisnet.org/" ;
+    dcterms:title "Mammal Networked Information System" ;
+    dcterms:type "Software" .
+
+<https://cran.r-project.org/web/packages/dismo/> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:53" ;
+    dcterms:description "Functions for species distribution modeling, that is, predicting entire geographic distributions form occurrences at a number of sites and the environment at these sites." ;
+    dcterms:source "https://cran.r-project.org/src/contrib/dismo_1.1-1.tar.gz" ;
+    dcterms:title "dismo: Species Distribution Modeling" ;
+    dcterms:type "software" ;
+    prov:wasAttributedTo <http://desp.ucdavis.edu/people/robert-j-hijmans> .
+
+<https://www.cs.princeton.edu/~schapire/maxent/> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:54" ;
+    dcterms:description "http://homepages.inf.ed.ac.uk/lzhang10/maxent.html" ;
+    dcterms:source "https://www.cs.princeton.edu/~schapire/maxent/" ;
+    dcterms:title "MAXENT Software" ;
+    dcterms:type "Software" ;
+    prov:wasAttributedTo <http://dbpedia.org/resource/Robert_Schapire> .
+
+<http://bioprov.poli.usp.br/agents/6613529> a prov:Agent ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    rdfs:seeAlso <http://orcid.org/0000-0002-1244-9126> ;
+    foaf:mbox <mailto:daniellins@usp.br> ;
+    foaf:name "Daniel Lins da Silva" .
+
+<http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_arctos> a prov:Entity ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/speciesRecords/Urocitellus_beldingi_Arctos.csv" ;
+    dcterms:title "Occurrence file of the Urocitellus_beldingi species." ;
+    dcterms:type "Dataset" ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/act/retrieving1> .
+
+<http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_manis> a prov:Entity ;
+    dcterms:created "2016-09-05 11:19:44" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/speciesRecords/Urocitellus_beldingi_Manis.txt" ;
+    dcterms:title "Occurrence file of the Urocitellus_beldingi species." ;
+    dcterms:type "Dataset" ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/act/retrieving2> .
+
+<http://bioprov.poli.usp.br/model/Urocitellus_beldingi> a prov:Entity ;
+    dcterms:created "2016-09-05 11:21:54" ;
+    dcterms:source "https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/tree/master/ex1_oBeech_modern_randomBg_r/" ;
+    dcterms:subject "http://bioprov.poli.usp.br/agents/8788438" ;
+    dcterms:title "Resulting Model from MAXENT" ;
+    dcterms:type "Collection" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/act/analysing1> .
+
+<http://bioprov.poli.usp.br/param/edate> a prov:Entity ;
+    ns1:dataType "InputParam" ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    dcterms:type "Text" ;
+    rdf:value "2009" .
+
+<http://bioprov.poli.usp.br/param/sdate> a prov:Entity ;
+    ns1:dataType "InputParam" ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    dcterms:type "Text" ;
+    rdf:value "1970" .
+
+<http://bioprov.poli.usp.br/param/species> a prov:Entity ;
+    ns1:dataType "InputParam" ;
+    dcterms:created "2016-09-05 11:19:43" ;
+    dcterms:type "Text" ;
+    rdf:value "Urocitellus beldingi" .
+
+prism.oregonstate.edu: a prov:Agent ;
+    dcterms:created "2016-09-05 11:19:48" ;
+    rdfs:seeAlso <http://www.cefa.dri.edu/Westmap/Westmap_home.php?page=Prism101.php> ;
+    foaf:homepage prism.oregonstate.edu: ;
+    foaf:name "PRISM Climate Group" .
+
+

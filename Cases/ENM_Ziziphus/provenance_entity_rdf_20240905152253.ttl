@@ -1,0 +1,179 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://bioprov.poli.usp.br/models/ziziphusJuazeiro> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:24" ;
+    dcterms:source "https://gitlab.com/daniellins/R_functions/blob/master/ENM_result_ziziphus.jpg" ;
+    dcterms:title "Map with the final result of SDM experiment" ;
+    dcterms:type "rasterLayer" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529>,
+        <http://bioprov.poli.usp.br/agents/8788438> ;
+    prov:wasDerivedFrom <http://bioprov.org/entities/bcffd775-b82c-4720-91b2-c20d61461a41> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/Improvement> .
+
+<http://bioprov.poli.usp.br/Improvement> a prov:Activity ;
+    dcterms:created "2024-09-05 14:59:26" ;
+    dcterms:title "Map Improvement using Reclassify function of RASTER package" ;
+    dcterms:type "Improvement" ;
+    rdfs:seeAlso <https://www.rdocumentation.org/packages/raster/versions/2.5-2/topics/reclassify> ;
+    prov:used <http://bioprov.org/entities/bcffd775-b82c-4720-91b2-c20d61461a41> .
+
+<http://bioprov.poli.usp.br/acquisition> a prov:Activity ;
+    dcterms:created "2024-09-05 14:59:06" ;
+    dcterms:title "Retrieving and Preparing Occurrence Records from GBIF" ;
+    dcterms:type "Acquisition" ;
+    prov:used <http://bioprov.poli.usp.br/param/country>,
+        <http://bioprov.poli.usp.br/param/hasCoordinate>,
+        <http://bioprov.poli.usp.br/param/hasGeospatialIssue>,
+        <http://bioprov.poli.usp.br/param/species>,
+        <https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R> .
+
+<http://bioprov.poli.usp.br/agents/8788438> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:35" ;
+    dcterms:type "Researcher" ;
+    rdfs:seeAlso <http://lattes.cnpq.br/2015345575533420> ;
+    foaf:mbox <mailto:andrefmb@usp.br> ;
+    foaf:name "Andre Filipe de Moraes Batista" .
+
+<http://bioprov.poli.usp.br/analysing> a prov:Activity ;
+    dcterms:created "2024-09-05 14:59:15" ;
+    dcterms:title "Species Distribution Modeling with the Bioclim Algorithm" ;
+    dcterms:type "Analysis" ;
+    prov:used <http://bioprov.poli.usp.br/bioclim_env_layers>,
+        <http://bioprov.poli.usp.br/occ_ziziphus_juazeiro>,
+        <http://cran.r-project.org/web/packages/dismo> .
+
+<http://bioprov.poli.usp.br/bioclim_env_layers> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:08" ;
+    dcterms:description "Environmental Layers from WorldClim Website." ;
+    dcterms:source "https://gitlab.com/daniellins/Prov_ENM_Ziziphus/tree/master/clima" ;
+    dcterms:title "Worldclim Environmental Layers" ;
+    dcterms:type "RasterLayer" ;
+    prov:wasAttributedTo <http://www.worldclim.org/> .
+
+<http://bioprov.poli.usp.br/occ_ziziphus_juazeiro> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:03" ;
+    dcterms:title "Occurrence Dataset of Ziziphus juazeiro in Brazil" ;
+    dcterms:type "Dataset" ;
+    prov:wasAttributedTo <http://gbif.org/> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/acquisition> .
+
+<http://bioprov.poli.usp.br/param/country> a prov:Entity ;
+    dcterms:created "2024-09-05 14:58:56" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "BR" .
+
+<http://bioprov.poli.usp.br/param/hasCoordinate> a prov:Entity ;
+    dcterms:created "2024-09-05 14:58:59" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "TRUE" .
+
+<http://bioprov.poli.usp.br/param/hasGeospatialIssue> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:01" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "FALSE" .
+
+<http://bioprov.poli.usp.br/param/species> a prov:Entity ;
+    dcterms:created "2024-09-05 14:30:06",
+        "2024-09-05 14:58:54" ;
+    dcterms:type "InputParameter",
+        "Text" ;
+    rdf:value "Urocitellus beldingi",
+        "Ziziphus joazeiro" .
+
+<http://bioprov.poli.usp.br/projecting> a prov:Activity ;
+    dcterms:created "2024-09-05 14:59:22" ;
+    dcterms:title "Projecting model on a map" ;
+    dcterms:type "Projecting" ;
+    prov:used <http://bioprov.org/entities/064fbe14-c520-485c-9958-6b57407f2bfc>,
+        <http://cran.r-project.org/web/packages/raster#plot> .
+
+<http://cran.r-project.org/web/packages/dismo> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:10" ;
+    dcterms:source "http://cran.r-project.org/src/contrib/dismo_1.0-15.tar.gz" ;
+    dcterms:title "BIOCLIM implementation of DISMO package" ;
+    dcterms:type "Software" ;
+    rdfs:seeAlso <http://cran.r-project.org/web/packages/dismo/dismo.pdf>,
+        <http://finzi.psych.upenn.edu/library/dismo/html/bioclim.html> ;
+    prov:wasAttributedTo <http://desp.ucdavis.edu/people/robert-j-hijmans> .
+
+<http://cran.r-project.org/web/packages/raster#plot> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:19" ;
+    dcterms:source "http://cran.r-project.org/src/contrib/raster_2.5-2.tar.gz" ;
+    dcterms:title "Plot function of the RASTER package from R Programming Language" ;
+    dcterms:type "Software" ;
+    rdfs:seeAlso <http://cran.r-project.org/web/packages/raster/raster.pdf> ;
+    prov:wasAttributedTo <http://desp.ucdavis.edu/people/robert-j-hijmans> .
+
+<http://cran.rstudio.com/web/packages/rgbif> a prov:Entity ;
+    dcterms:created "2024-09-05 14:58:49" ;
+    dcterms:description "Interface to the Global Biodiversity Information Facility API" ;
+    dcterms:source "http://cran.rstudio.com/web/packages/rgbif/" ;
+    dcterms:title "rgibf" ;
+    dcterms:type "Software" ;
+    prov:wasAttributedTo <http://ropensci.org/> .
+
+<https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R> a prov:Entity ;
+    dcterms:created "2024-09-05 14:58:52" ;
+    dcterms:source "https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R" ;
+    dcterms:title "GBIF data acquisition and preparation function" ;
+    dcterms:type "Software" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasDerivedFrom <http://cran.rstudio.com/web/packages/rgbif> .
+
+<http://bioprov.org/entities/064fbe14-c520-485c-9958-6b57407f2bfc> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:12" ;
+    dcterms:title "Species Distribution Model of the Ziziphus juazeiro" ;
+    dcterms:type "Model" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/analysing> .
+
+<http://bioprov.org/entities/bcffd775-b82c-4720-91b2-c20d61461a41> a prov:Entity ;
+    dcterms:created "2024-09-05 14:59:17" ;
+    dcterms:description "Species Distribution Model projected on the map" ;
+    dcterms:title "Species Distribution Model Projection" ;
+    dcterms:type "rasterLayer" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasDerivedFrom <http://bioprov.org/entities/064fbe14-c520-485c-9958-6b57407f2bfc> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/projecting> .
+
+<http://gbif.org/> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:40" ;
+    dcterms:description "The Global Biodiversity Information Facility (GBIF) is an international open data infrastructure." ;
+    dcterms:type "Institution" ;
+    foaf:homepage <http://gbif.org/> ;
+    foaf:name "Global Biodiversity Information Facility" .
+
+<http://ropensci.org/> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:42" ;
+    dcterms:description "Help develop R packages for the sciences via community driven learning, review and maintenance of contributed software in the R ecosystem" ;
+    dcterms:type "Institution" ;
+    foaf:homepage <http://ropensci.org/> ;
+    foaf:name "ROpenSci" .
+
+<http://www.worldclim.org/> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:45" ;
+    dcterms:description "Environmental Layers from WorldClim Website." ;
+    dcterms:type "Institution" ;
+    foaf:homepage <http://www.worldclim.org/> ;
+    foaf:name "Environmental Layers from WorldClim Website." .
+
+<http://desp.ucdavis.edu/people/robert-j-hijmans> a prov:Agent ;
+    dcterms:created "2024-09-05 14:31:22",
+        "2024-09-05 14:58:47" ;
+    dcterms:description "International Agricultural Development Robert Hijmans studies international agricultural development and human health. He is particularly interested in the role of biodiversity in agriculture, and in climate change. He specializes in spatial analysis, ecological modeling and geo-informatics." ;
+    dcterms:type "Institution" ;
+    foaf:homepage <http://desp.ucdavis.edu/people/robert-j-hijmans> ;
+    foaf:name "Environmental Science & Policy" .
+
+<http://bioprov.poli.usp.br/agents/6613529> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:32" ;
+    dcterms:type "Researcher" ;
+    rdfs:seeAlso <http://lattes.cnpq.br/6502450550040226> ;
+    foaf:mbox <mailto:daniellins@usp.br> ;
+    foaf:name "Daniel Lins da Silva" .
+
+

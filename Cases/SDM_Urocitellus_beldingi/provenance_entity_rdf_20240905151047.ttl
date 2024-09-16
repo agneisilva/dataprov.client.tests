@@ -1,0 +1,32 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://bioprov.poli.usp.br/bundle/2> a prov:Bundle ;
+    dcterms:created "2024-09-05 14:58:38" ;
+    dcterms:creator "http://bioprov.poli.usp.br/agents/6613529" ;
+    dcterms:description """This work aims to show the relationship between physical aspects and the occurrence of endemic species of the Brazilian semi-arid 
+region through ecological niche modeling technique aided by remote sensing products. It is an interdisciplinary project, integrating Brazilian and Spanish research centers in the 
+study fields of biogeography, remote sensing, statistics and computer science. We use the R programming language and DISMO Package to execute this experiment.""" ;
+    dcterms:source "https://gitlab.com/daniellins/Prov_ENM_Ziziphus/" ;
+    dcterms:title "Habitat Adequability of Ziziphus juazeiro specie in the Brazilian Semi-arid Region through Ecological Niche Modeling technique" ;
+    dcterms:type "Experiment" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529>,
+        <http://bioprov.poli.usp.br/agents/8788438> .
+
+<http://bioprov.poli.usp.br/agents/6613529> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:32" ;
+    dcterms:type "Researcher" ;
+    rdfs:seeAlso <http://lattes.cnpq.br/6502450550040226> ;
+    foaf:mbox <mailto:daniellins@usp.br> ;
+    foaf:name "Daniel Lins da Silva" .
+
+<http://bioprov.poli.usp.br/agents/8788438> a prov:Agent ;
+    dcterms:created "2024-09-05 14:58:35" ;
+    dcterms:type "Researcher" ;
+    rdfs:seeAlso <http://lattes.cnpq.br/2015345575533420> ;
+    foaf:mbox <mailto:andrefmb@usp.br> ;
+    foaf:name "Andre Filipe de Moraes Batista" .
+
+

@@ -1,0 +1,45 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://bioprov.poli.usp.br/bundle/31> a prov:Bundle ;
+    dcterms:created "2021-02-23 08:29:59" ;
+    dcterms:creator "http://orcid.org/0000-0002-1244-9126" ;
+    dcterms:description "This work aims to show the relationship between physical aspects and the occurrences of Urocitellus beldingi in the Western US. We use the R programming language and DISMO Package to execute this experiment." ;
+    dcterms:title "Species Distribution Modeling of Urocitellus beldingi " ;
+    dcterms:type "Experiment" ;
+    prov:wasAttributedTo <http://orcid.org/0000-0002-1244-9126>,
+        <http://orcid.org/0000-0003-4627-0244> ;
+    prov:wasDerivedFrom <http://www.uc-ciee.org/Grinnellresurvey> .
+
+<http://bioprov.poli.usp.br/projects/5> a prov:Entity ;
+    dcterms:created "2021-02-23 08:29:59" ;
+    dcterms:title "Testing methods for predicting mammalian species responses to 20th century climate change in California" ;
+    prov:wasAttributedTo <http://orcid.org/0000-0002-6420-1659> .
+
+<http://orcid.org/0000-0002-1244-9126> a prov:Agent ;
+    dcterms:created "2021-02-23 08:29:59" ;
+    rdfs:seeAlso <http://bioprov.poli.usp.br/students/6613529> ;
+    foaf:mbox <mailto:daniellins@usp.br> ;
+    foaf:name "Daniel Lins da Silva" .
+
+<http://orcid.org/0000-0002-6420-1659> a prov:Agent ;
+    dcterms:created "2021-02-23 08:29:59" ;
+    rdfs:seeAlso <http://www.earthskysea.org/> ;
+    foaf:mbox <mailto:adam@earthskysea.org> ;
+    foaf:name "Adam B. Smith" .
+
+<http://orcid.org/0000-0003-4627-0244> a prov:Agent ;
+    dcterms:created "2021-02-23 08:29:59" ;
+    rdfs:seeAlso <http://bioprov.poli.usp.br/students/8788438> ;
+    foaf:mbox <mailto:andrefmb@usp.br> ;
+    foaf:name "Andre Filipe de Moraes Batista" .
+
+<http://www.uc-ciee.org/Grinnellresurvey> a prov:Entity ;
+    dcterms:created "2011-03-31" ;
+    dcterms:source "http://www.uc-ciee.org/downloads/Grinnellresurvey.Smith.pdf" ;
+    dcterms:title "Testing methods for predicting mammalian species responses to 20th century climate change in California" ;
+    prov:wasDerivedFrom <http://bioprov.poli.usp.br/projects/5> .
+
+

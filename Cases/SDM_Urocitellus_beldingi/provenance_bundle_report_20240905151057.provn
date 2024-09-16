@@ -1,0 +1,262 @@
+document
+  prefix brick <https://brickschema.org/schema/Brick#>
+  prefix csvw <http://www.w3.org/ns/csvw#>
+  prefix dc <http://purl.org/dc/elements/1.1/>
+  prefix dcat <http://www.w3.org/ns/dcat#>
+  prefix dcmitype <http://purl.org/dc/dcmitype/>
+  prefix dcterms <http://purl.org/dc/terms/>
+  prefix dcam <http://purl.org/dc/dcam/>
+  prefix doap <http://usefulinc.com/ns/doap#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix geo <http://www.opengis.net/ont/geosparql#>
+  prefix odrl <http://www.w3.org/ns/odrl/2/>
+  prefix org <http://www.w3.org/ns/org#>
+  prefix prof <http://www.w3.org/ns/dx/prof/>
+  prefix qb <http://purl.org/linked-data/cube#>
+  prefix schema <https://schema.org/>
+  prefix sh <http://www.w3.org/ns/shacl#>
+  prefix skos <http://www.w3.org/2004/02/skos/core#>
+  prefix sosa <http://www.w3.org/ns/sosa/>
+  prefix ssn <http://www.w3.org/ns/ssn/>
+  prefix time <http://www.w3.org/2006/time#>
+  prefix vann <http://purl.org/vocab/vann/>
+  prefix void <http://rdfs.org/ns/void#>
+  prefix wgs <https://www.w3.org/2003/01/geo/wgs84_pos#>
+  prefix owl <http://www.w3.org/2002/07/owl#>
+  prefix rdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  prefix rdfs <http://www.w3.org/2000/01/rdf-schema#>
+  prefix xml <http://www.w3.org/XML/1998/namespace>
+  prefix bioprov <http://bioprov.org/>
+  prefix poli <http://poli.usp.br/>
+  prefix teste <http://teste.com/>
+  prefix bioprov.poli.usp.br <http://bioprov.poli.usp.br/step3_merging>
+  prefix www.cs.princeton.edu <https://www.cs.princeton.edu/~schapire/maxent/>
+  prefix bioprov.poli.usp.br1 <http://bioprov.poli.usp.br/Improvement>
+  prefix cran.r-project.org <http://cran.r-project.org/web/packages/dismo>
+  prefix bioprov.poli.usp.br2 <http://bioprov.poli.usp.br/step1_retrieving>
+  prefix bioprov.poli.usp.br3 <http://bioprov.poli.usp.br/step5_analysing>
+  prefix cran.r-project.org1 <https://cran.r-project.org/web/packages/dismo/>
+  prefix bioprov.poli.usp.br4 <http://bioprov.poli.usp.br/map_bioclim_bio18>
+  prefix bioprov.poli.usp.br5 <http://bioprov.poli.usp.br/acquisition>
+  prefix www.uc-ciee.org <http://www.uc-ciee.org/Grinnellresurvey>
+  prefix bioprov.poli.usp.br6 <http://bioprov.poli.usp.br/param/linear>
+  prefix bioprov.poli.usp.br7 <http://bioprov.poli.usp.br/bundle/31>
+  prefix bioprov.poli.usp.br8 <http://bioprov.poli.usp.br/map_bioclim_bio07>
+  prefix bioprov.poli.usp.br9 <http://bioprov.poli.usp.br/param/quad>
+  prefix bioprov.poli.usp.br10 <http://bioprov.poli.usp.br/map_bioclim_bio15>
+  prefix manisnet.org <http://manisnet.org/>
+  prefix dbpedia.org <http://dbpedia.org/resource/Robert_Schapire>
+  prefix bioprov.poli.usp.br11 <http://bioprov.poli.usp.br/analysing>
+  prefix bioprov.poli.usp.br12 <http://bioprov.poli.usp.br/map_bioclim_bio03>
+  prefix bioprov.poli.usp.br13 <http://bioprov.poli.usp.br/param/species>
+  prefix bioprov.poli.usp.br14 <http://bioprov.poli.usp.br/step6_prediction>
+  prefix bioprov.poli.usp.br15 <http://bioprov.poli.usp.br/map_bioclim_bio02>
+  prefix ropensci.org <http://ropensci.org/>
+  prefix bioprov.poli.usp.br16 <http://bioprov.poli.usp.br/step2_retrieving>
+  prefix bioprov.poli.usp.br17 <http://bioprov.poli.usp.br/param/aow>
+  prefix orcid.org <http://orcid.org/0000-0003-4627-0244>
+  prefix bioprov.poli.usp.br18 <http://bioprov.poli.usp.br/bundle/2>
+  prefix arctos.database.museum <http://arctos.database.museum/>
+  prefix bioprov.poli.usp.br19 <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_xy>
+  prefix cran.r-project.org2 <http://cran.r-project.org/web/packages/raster#>
+  prefix bioprov.poli.usp.br20 <http://bioprov.poli.usp.br/projecting>
+  prefix bioprov.poli.usp.br21 <http://bioprov.poli.usp.br/param/jn>
+  prefix gitlab.com <https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R>
+  prefix bioprov.poli.usp.br22 <http://bioprov.poli.usp.br/step4_cleaning>
+  prefix bioprov.poli.usp.br23 <http://bioprov.poli.usp.br/param/sdate>
+  prefix bioprov.poli.usp.br24 <http://bioprov.poli.usp.br/param/hinge>
+  prefix orcid.org1 <http://orcid.org/0000-0002-1244-9126>
+  prefix bioprov.poli.usp.br25 <http://bioprov.poli.usp.br/agents/8788438>
+  prefix bioprov.poli.usp.br26 <http://bioprov.poli.usp.br/agents/6613529>
+  prefix bioprov.poli.usp.br27 <http://bioprov.poli.usp.br/param/bm>
+  prefix bioprov.poli.usp.br28 <http://bioprov.poli.usp.br/mapmodels/Urocitellus_beldingi>
+  prefix cran.rstudio.com <http://cran.rstudio.com/web/packages/rgbif>
+  prefix bioprov.poli.usp.br29 <http://bioprov.poli.usp.br/bioclim_env_layers>
+  prefix bioprov.poli.usp.br30 <http://bioprov.poli.usp.br/map_bioclim_bio05>
+  prefix bioprov.poli.usp.br31 <http://bioprov.poli.usp.br/model/Urocitellus_beldingi>
+  prefix bioprov.poli.usp.br32 <http://bioprov.poli.usp.br/map_bioclim_bio06>
+  prefix gbif.org <http://gbif.org/>
+  prefix www.rstudio.com <http://www.rstudio.com/products/rstudio/>
+  prefix bioprov.poli.usp.br33 <http://bioprov.poli.usp.br/occ_ziziphus_juazeiro>
+  prefix bioprov.poli.usp.br34 <http://bioprov.poli.usp.br/param/country>
+  prefix bioprov.poli.usp.br35 <http://bioprov.poli.usp.br/map_bioclim_bio14>
+  prefix bioprov.poli.usp.br36 <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_arctos>
+  prefix desp.ucdavis.edu <http://desp.ucdavis.edu/people/robert-j-hijmans>
+  prefix bioprov.poli.usp.br37 <http://bioprov.poli.usp.br/models/ziziphusJuazeiro>
+  prefix bioprov.poli.usp.br38 <http://bioprov.poli.usp.br/dataset/Urocitellus_beldingi_manis>
+  prefix bioprov.poli.usp.br39 <http://bioprov.poli.usp.br/param/hasCoordinate>
+  prefix bioprov.poli.usp.br40 <http://bioprov.poli.usp.br/param/threads>
+  prefix bioprov.poli.usp.br41 <http://bioprov.poli.usp.br/param/hasGeospatialIssue>
+  prefix bioprov.poli.usp.br42 <http://bioprov.poli.usp.br/param/edate>
+  prefix www.prism.oregonstate.edu <http://www.prism.oregonstate.edu/>
+  prefix bioprov.poli.usp.br43 <http://bioprov.poli.usp.br/param/rc>
+  prefix bioprov.poli.usp.br44 <http://bioprov.poli.usp.br/projects/5>
+  prefix www.worldclim.org <http://www.worldclim.org/>
+  prefix orcid.org2 <http://orcid.org/0000-0002-6420-1659>
+  prefix bioprov.poli.usp.br45 <http://bioprov.poli.usp.br/param/product>
+  prefix bioprov.poli.usp.br46 <http://bioprov.poli.usp.br/param/rtp>
+  prefix bioprov.poli.usp.br47 <http://bioprov.poli.usp.br/map_bioclim_bio13>
+  prefix bioprov.poli.usp.br48 <http://bioprov.poli.usp.br/param/thld>
+  
+  activity(bioprov.poli.usp.br:, -, -, [dcterms:title="Merging Occurrence Records from ARCTOS and MANIS", dcterms:created="2024-09-05 14:30:24"])
+  entity(www.cs.princeton.edu:, [dcterms:description="http://homepages.inf.ed.ac.uk/lzhang10/maxent.html", dcterms:created="2024-09-05 14:31:27", dcterms:title="MAXENT Software", dcterms:source="https://www.cs.princeton.edu/~schapire/maxent/"])
+  activity(bioprov.poli.usp.br1:, -, -, [rdfs:seeAlso="https://www.rdocumentation.org/packages/raster/versions/2.5-2/topics/reclassify", dcterms:type="Improvement", dcterms:created="2024-09-05 14:59:26", dcterms:title="Map Improvement using Reclassify function of RASTER package"])
+  entity(cran.r-project.org:, [rdfs:seeAlso="http://cran.r-project.org/web/packages/dismo/dismo.pdf", dcterms:type="Software", dcterms:title="BIOCLIM implementation of DISMO package", dcterms:source="http://cran.r-project.org/src/contrib/dismo_1.0-15.tar.gz", dcterms:created="2024-09-05 14:59:10"])
+  activity(bioprov.poli.usp.br5:, -, -, [dcterms:type="Acquisition", dcterms:title="Retrieving and Preparing Occurrence Records from GBIF", dcterms:created="2024-09-05 14:59:06"])
+  activity(bioprov.poli.usp.br14:, -, -, [dcterms:created="2024-09-05 14:31:40", dcterms:title="Prediction based on the Distribuion Modeling and ", dcterms:description="Prediction based on the Distribution Modeling and modern scenario"])
+  entity(bioprov.poli.usp.br17:, [dcterms:created="2024-09-05 14:31:17", rdf:value="false"])
+  activity(bioprov.poli.usp.br2:, -, -, [dcterms:created="2024-09-05 14:30:17", dcterms:title="Retrieving Occurrence Records from ARCTOS Portal"])
+  agent(orcid.org1:, [rdfs:seeAlso="http://bioprov.poli.usp.br/students/6613529", foaf:mbox="mailto:daniellins@usp.br", foaf:name="Daniel Lins da Silva", dcterms:created="2024-09-05 14:29:54"])
+  activity(bioprov.poli.usp.br3:, -, -, [dcterms:title="Species Distribution Modeling", dcterms:created="2024-09-05 14:31:34"])
+  entity(cran.r-project.org2:plot, [rdfs:seeAlso="http://cran.r-project.org/web/packages/raster/raster.pdf", dcterms:type="Software", dcterms:created="2024-09-05 14:59:19", dcterms:source="http://cran.r-project.org/src/contrib/raster_2.5-2.tar.gz", dcterms:title="Plot function of the RASTER package from R Programming Language"])
+  entity(bioprov.poli.usp.br8:, [dcterms:title="Temperature annual range (BIO05-BIO06)", dcterms:description="Resolution=800m", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO07.asc", dcterms:created="2024-09-05 14:30:38"])
+  activity(bioprov.poli.usp.br16:, -, -, [dcterms:title="Retrieving Occurrence Records from MANIS Portal", dcterms:created="2024-09-05 14:30:20"])
+  agent(bioprov.poli.usp.br26:, [rdfs:seeAlso="http://lattes.cnpq.br/6502450550040226", dcterms:created="2024-09-05 14:58:32", dcterms:type="Researcher", foaf:name="Daniel Lins da Silva", foaf:mbox="mailto:daniellins@usp.br"])
+  entity(bioprov.poli.usp.br27:, [dcterms:created="2024-09-05 14:30:57", rdf:value="1"])
+  entity(cran.r-project.org1:, [dcterms:title="dismo: Species Distribution Modeling", dcterms:created="2024-09-05 14:31:24", dcterms:source="https://cran.r-project.org/src/contrib/dismo_1.1-1.tar.gz", dcterms:description="Functions for species distribution modeling, that is, predicting entire geographic distributions form occurrences at a number of sites and the environment at these sites."])
+  entity(bioprov.poli.usp.br12:, [dcterms:title="Isothermality (BIO2/BIO07)", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO03.asc", dcterms:created="2024-09-05 14:30:41", dcterms:description="Resolution=800m"])
+  entity(bioprov.poli.usp.br24:, [rdf:value="true", dcterms:created="2024-09-05 14:31:08"])
+  entity(bioprov.poli.usp.br19:, [dcterms:created="2024-09-05 14:30:22", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/speciesRecords/Urocitellus_beldingi_training_modern_xy.csv", dcterms:title="Occurrence file of the Urocitellus_beldingi species."])
+  agent(orcid.org:, [dcterms:created="2024-09-05 14:29:57", foaf:mbox="mailto:andrefmb@usp.br", foaf:name="Andre Filipe de Moraes Batista", rdfs:seeAlso="http://bioprov.poli.usp.br/students/8788438"])
+  entity(bioprov.poli.usp.br32:, [dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO06.asc", dcterms:description="Resolution=800m", dcterms:created="2024-09-05 14:30:36", dcterms:title="Minimum temperature of the coldest month"])
+  entity(bioprov.poli.usp.br31:, [dcterms:created="2024-09-05 14:31:31", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/tree/master/ex1_oBeech_modern_randomBg_r/", dcterms:title="Resulting Model from MAXENT"])
+  entity(bioprov.poli.usp.br29:, [dcterms:description="Environmental Layers from WorldClim Website.", dcterms:source="https://gitlab.com/daniellins/Prov_ENM_Ziziphus/tree/master/clima", dcterms:created="2024-09-05 14:59:08", dcterms:title="Worldclim Environmental Layers", dcterms:type="RasterLayer"])
+  entity(bioprov.poli.usp.br34:, [dcterms:type="InputParameter", rdf:value="BR", dcterms:created="2024-09-05 14:58:56"])
+  agent(bioprov.poli.usp.br25:, [foaf:mbox="mailto:andrefmb@usp.br", dcterms:type="Researcher", dcterms:created="2024-09-05 14:58:35", foaf:name="Andre Filipe de Moraes Batista", rdfs:seeAlso="http://lattes.cnpq.br/2015345575533420"])
+  entity(bioprov.poli.usp.br6:, [rdf:value="true", dcterms:created="2024-09-05 14:30:59"])
+  agent(desp.ucdavis.edu:, [foaf:name="Environmental Science & Policy", foaf:homepage="http://desp.ucdavis.edu/people/robert-j-hijmans", dcterms:created="2024-09-05 14:58:47", dcterms:type="Institution", dcterms:description="International Agricultural Development Robert Hijmans studies international agricultural development and human health. He is particularly interested in the role of biodiversity in agriculture, and in climate change. He specializes in spatial analysis, ecological modeling and geo-informatics."])
+  entity(bioprov.poli.usp.br42:, [dcterms:type="Text", dcterms:created="2024-09-05 14:30:11", rdf:value="2009"])
+  entity(bioprov.poli.usp.br43:, [rdf:value="true", dcterms:created="2024-09-05 14:31:13"])
+  entity(bioprov.poli.usp.br44:, [dcterms:created="2024-09-05 14:29:50", dcterms:title="Testing methods for predicting mammalian species responses to 20th century climate change in California"])
+  agent(www.worldclim.org:, [dcterms:type="Institution", foaf:homepage="http://www.worldclim.org/", dcterms:description="Environmental Layers from WorldClim Website.", dcterms:created="2024-09-05 14:58:45", foaf:name="Environmental Layers from WorldClim Website."])
+  activity(bioprov.poli.usp.br22:, -, -, [dcterms:created="2024-09-05 14:30:27", dcterms:title="Cleaning Occurrence Records based on criteria described in the file.", dcterms:description="Cleaning Criteria: https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/ex1_oBeech_modern_randomBg_r/data_cleaning_criteria.txt"])
+  entity(bioprov.poli.usp.br10:, [dcterms:description="Resolution=800m", dcterms:title="Precipitation Seasonality (Coefficient of Variation)", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO15.asc", dcterms:created="2024-09-05 14:30:50"])
+  entity(gitlab.com:, [dcterms:title="GBIF data acquisition and preparation function", dcterms:type="Software", dcterms:created="2024-09-05 14:58:52", dcterms:source="https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R"])
+  entity(bioprov.poli.usp.br41:, [dcterms:created="2024-09-05 14:59:01", dcterms:type="InputParameter", rdf:value="FALSE"])
+  agent(orcid.org2:, [rdfs:seeAlso="http://www.earthskysea.org/", foaf:name="Adam B. Smith", dcterms:created="2024-09-05 14:23:20", foaf:mbox="mailto:adam@earthskysea.org"])
+  agent(gbif.org:, [dcterms:created="2024-09-05 14:58:40", dcterms:description="The Global Biodiversity Information Facility (GBIF) is an international open data infrastructure.", dcterms:type="Institution", foaf:homepage="http://gbif.org/", foaf:name="Global Biodiversity Information Facility"])
+  entity(bioprov.poli.usp.br38:, [dcterms:title="Occurrence file of the Urocitellus_beldingi species", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/speciesRecords/Urocitellus_beldingi_Manis.txt", dcterms:created="2024-09-05 14:30:15"])
+  entity(bioprov.poli.usp.br36:, [dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/speciesRecords/Urocitellus_beldingi_Arctos.csv", dcterms:title="Occurrence file of the Urocitellus_beldingi species", dcterms:created="2024-09-05 14:30:13"])
+  entity(bioprov:entities/bcffd775-b82c-4720-91b2-c20d61461a41, [dcterms:title="Species Distribution Model Projection", dcterms:type="rasterLayer", dcterms:created="2024-09-05 14:59:17", dcterms:description="Species Distribution Model projected on the map"])
+  entity(bioprov.poli.usp.br28:, [dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/ex1_oBeech_modern_randomBg_r/Urocitellus_beldingi_map_modern.tif", dcterms:title="Raster Map of Species Distribution Modeling", dcterms:created="2024-09-05 14:31:38", dcterms:type="StillImage"])
+  entity(bioprov.poli.usp.br13:, [dcterms:type="Text", dcterms:created="2024-09-05 14:30:06", rdf:value="Ziziphus joazeiro"])
+  entity(bioprov.poli.usp.br15:, [dcterms:title="Mean diurnal temperature range", dcterms:created="2024-09-05 14:30:31", dcterms:type="StillImage", dcterms:description="Resolution=800m", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO02.asc"])
+  entity(bioprov.poli.usp.br9:, [dcterms:created="2024-09-05 14:31:01", rdf:value="true"])
+  entity(manisnet.org:, [dcterms:created="2024-09-05 14:30:04", dcterms:source="http://manisnet.org/", dcterms:description="Information System developed by seventeen North American institutions with support from NSF.", dcterms:title="Mammal Networked Information System"])
+  agent(ropensci.org:, [dcterms:created="2024-09-05 14:58:42", dcterms:description="Help develop R packages for the sciences via community driven learning, review and maintenance of contributed software in the R ecosystem", dcterms:type="Institution", foaf:name="ROpenSci", foaf:homepage="http://ropensci.org/"])
+  entity(bioprov.poli.usp.br45:, [rdf:value="true", dcterms:created="2024-09-05 14:31:04"])
+  entity(www.rstudio.com:, [dcterms:description="http://www.rstudio.com/products/rstudio/", dcterms:created="2024-09-05 14:31:29", dcterms:title="RStudio Software", dcterms:source="http://www.rstudio.com/products/rstudio/download/"])
+  entity(bioprov.poli.usp.br30:, [dcterms:created="2024-09-05 14:30:34", dcterms:description="Resolution=800m", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO05.asc", dcterms:title="Maximum temperature of the warmest month"])
+  entity(cran.rstudio.com:, [dcterms:created="2024-09-05 14:58:49", dcterms:source="http://cran.rstudio.com/web/packages/rgbif/", dcterms:title="rgibf", dcterms:type="Software", dcterms:description="Interface to the Global Biodiversity Information Facility API"])
+  entity(bioprov:entities/064fbe14-c520-485c-9958-6b57407f2bfc, [dcterms:title="Species Distribution Model of the Ziziphus juazeiro", dcterms:created="2024-09-05 14:59:12", dcterms:type="Model"])
+  agent(dbpedia.org:, [dcterms:description="Robert Elias Schapire is an American computer scientist, former David M. Siegel 83 Professor in the computer science department at Princeton University, and has recently moved to Microsoft Research. His primary specialty is theoretical and applied machine learning. His work led to the development of the boosting ensemble algorithm used in machine learning. Together with Yoav Freund, he invented the AdaBoost algorithm in 1996. They both received the prize in 2003 for this work.", dcterms:type="Institution", dcterms:created="2024-09-05 14:31:20", foaf:homepage="http://dbpedia.org/resource/Robert_Schapire", foaf:name="Robert Schapire"])
+  entity(bioprov.poli.usp.br4:, [dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO18.asc", dcterms:description="Resolution=800m", dcterms:title="Precipitation of Warmest Quarter", dcterms:created="2024-09-05 14:30:48"])
+  entity(arctos.database.museum:, [dcterms:title="Collaborative Collection Management Solution", dcterms:description="Arctos is both a community and a comprehensive collection management information system. ", dcterms:created="2024-09-05 14:30:01", dcterms:source="http://arctos.database.museum/"])
+  entity(bioprov.poli.usp.br33:, [dcterms:created="2024-09-05 14:59:03", dcterms:type="Dataset", dcterms:title="Occurrence Dataset of Ziziphus juazeiro in Brazil"])
+  entity(bioprov.poli.usp.br37:, [dcterms:title="Map with the final result of SDM experiment", dcterms:source="https://gitlab.com/daniellins/R_functions/blob/master/ENM_result_ziziphus.jpg", dcterms:type="rasterLayer", dcterms:created="2024-09-05 14:59:24"])
+  activity(bioprov.poli.usp.br20:, -, -, [dcterms:type="Projecting", dcterms:title="Projecting model on a map", dcterms:created="2024-09-05 14:59:22"])
+  agent(www.prism.oregonstate.edu:, [dcterms:created="2024-09-05 14:30:29", foaf:homepage="http://www.prism.oregonstate.edu/", foaf:name="PRISM Climate Group", rdfs:seeAlso="http://www.cefa.dri.edu/Westmap/Westmap_home.php?page=Prism101.php"])
+  entity(bioprov.poli.usp.br40:, [rdf:value="2", dcterms:created="2024-09-05 14:31:11"])
+  entity(bioprov.poli.usp.br21:, [dcterms:created="2024-09-05 14:31:15", rdf:value="true"])
+  entity(bioprov.poli.usp.br46:, [rdf:value="30", dcterms:created="2024-09-05 14:30:54"])
+  entity(www.uc-ciee.org:, [dcterms:created="2011-03-31", dcterms:title="Testing methods for predicting mammalian species responses to 20th century climate change in California", dcterms:source="http://www.uc-ciee.org/downloads/Grinnellresurvey.Smith.pdf"])
+  entity(bioprov.poli.usp.br48:, [rdf:value="true", dcterms:created="2024-09-05 14:31:06"])
+  activity(bioprov.poli.usp.br11:, -, -, [dcterms:title="Species Distribution Modeling with the Bioclim Algorithm", dcterms:created="2024-09-05 14:59:15", dcterms:type="Analysis"])
+  entity(bioprov.poli.usp.br35:, [dcterms:created="2024-09-05 14:30:45", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO14.asc", dcterms:title="Precipitation of Driest Month"])
+  entity(bioprov.poli.usp.br39:, [rdf:value="TRUE", dcterms:type="InputParameter", dcterms:created="2024-09-05 14:58:59"])
+  entity(bioprov.poli.usp.br47:, [dcterms:title="Precipitation of Wettest Month", dcterms:source="https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/westernUsClimate_modern/BIO13.asc", dcterms:description="Resolution=800m", dcterms:created="2024-09-05 14:30:43"])
+  entity(bioprov.poli.usp.br23:, [dcterms:created="2024-09-05 14:30:08", rdf:value="1970", dcterms:type="Text"])
+  used(bioprov.poli.usp.br:, bioprov.poli.usp.br38:, -)
+  used(bioprov.poli.usp.br2:, arctos.database.museum:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br12:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br46:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br35:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br27:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br47:, -)
+  used(bioprov.poli.usp.br11:, bioprov.poli.usp.br33:, -)
+  used(bioprov.poli.usp.br3:, cran.r-project.org1:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br40:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br10:, -)
+  used(bioprov.poli.usp.br5:, bioprov.poli.usp.br41:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br32:, -)
+  used(bioprov.poli.usp.br16:, bioprov.poli.usp.br13:, -)
+  used(bioprov.poli.usp.br3:, www.rstudio.com:, -)
+  used(bioprov.poli.usp.br11:, cran.r-project.org:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br45:, -)
+  used(bioprov.poli.usp.br5:, bioprov.poli.usp.br39:, -)
+  used(bioprov.poli.usp.br2:, bioprov.poli.usp.br13:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br4:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br9:, -)
+  used(bioprov.poli.usp.br11:, bioprov.poli.usp.br29:, -)
+  used(bioprov.poli.usp.br14:, bioprov.poli.usp.br31:, -)
+  used(bioprov.poli.usp.br1:, bioprov:entities/bcffd775-b82c-4720-91b2-c20d61461a41, -)
+  used(bioprov.poli.usp.br5:, bioprov.poli.usp.br13:, -)
+  used(bioprov.poli.usp.br:, bioprov.poli.usp.br36:, -)
+  used(bioprov.poli.usp.br16:, bioprov.poli.usp.br23:, -)
+  used(bioprov.poli.usp.br5:, gitlab.com:, -)
+  used(bioprov.poli.usp.br20:, bioprov:entities/064fbe14-c520-485c-9958-6b57407f2bfc, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br6:, -)
+  used(bioprov.poli.usp.br3:, www.cs.princeton.edu:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br21:, -)
+  used(bioprov.poli.usp.br5:, bioprov.poli.usp.br34:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br43:, -)
+  used(bioprov.poli.usp.br16:, manisnet.org:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br19:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br30:, -)
+  used(bioprov.poli.usp.br16:, bioprov.poli.usp.br42:, -)
+  used(bioprov.poli.usp.br2:, bioprov.poli.usp.br23:, -)
+  used(bioprov.poli.usp.br20:, cran.r-project.org2:plot, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br24:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br15:, -)
+  used(bioprov.poli.usp.br2:, bioprov.poli.usp.br42:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br17:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br8:, -)
+  used(bioprov.poli.usp.br3:, bioprov.poli.usp.br48:, -)
+  wasAttributedTo(bioprov.poli.usp.br8:, www.prism.oregonstate.edu:)
+  wasAttributedTo(bioprov.poli.usp.br12:, www.prism.oregonstate.edu:)
+  wasAttributedTo(www.cs.princeton.edu:, dbpedia.org:)
+  wasAttributedTo(bioprov.poli.usp.br18:, bioprov.poli.usp.br26:)
+  wasAttributedTo(bioprov.poli.usp.br31:, orcid.org1:)
+  wasAttributedTo(bioprov:entities/064fbe14-c520-485c-9958-6b57407f2bfc, bioprov.poli.usp.br26:)
+  wasAttributedTo(bioprov.poli.usp.br32:, www.prism.oregonstate.edu:)
+  wasAttributedTo(cran.rstudio.com:, ropensci.org:)
+  wasAttributedTo(bioprov.poli.usp.br28:, orcid.org:)
+  wasAttributedTo(bioprov.poli.usp.br10:, www.prism.oregonstate.edu:)
+  wasAttributedTo(bioprov.poli.usp.br18:, bioprov.poli.usp.br25:)
+  wasAttributedTo(bioprov.poli.usp.br28:, orcid.org1:)
+  wasAttributedTo(bioprov.poli.usp.br37:, bioprov.poli.usp.br25:)
+  wasAttributedTo(bioprov.poli.usp.br15:, www.prism.oregonstate.edu:)
+  wasAttributedTo(bioprov.poli.usp.br37:, bioprov.poli.usp.br26:)
+  wasAttributedTo(bioprov.poli.usp.br44:, orcid.org2:)
+  wasAttributedTo(cran.r-project.org:, desp.ucdavis.edu:)
+  wasAttributedTo(bioprov.poli.usp.br30:, www.prism.oregonstate.edu:)
+  wasAttributedTo(bioprov.poli.usp.br4:, www.prism.oregonstate.edu:)
+  wasAttributedTo(bioprov.poli.usp.br29:, www.worldclim.org:)
+  wasAttributedTo(gitlab.com:, bioprov.poli.usp.br26:)
+  wasAttributedTo(bioprov.poli.usp.br7:, orcid.org:)
+  wasAttributedTo(bioprov.poli.usp.br33:, gbif.org:)
+  wasAttributedTo(cran.r-project.org2:plot, desp.ucdavis.edu:)
+  wasAttributedTo(cran.r-project.org1:, desp.ucdavis.edu:)
+  wasAttributedTo(bioprov.poli.usp.br47:, www.prism.oregonstate.edu:)
+  wasAttributedTo(bioprov:entities/bcffd775-b82c-4720-91b2-c20d61461a41, bioprov.poli.usp.br26:)
+  wasAttributedTo(bioprov.poli.usp.br7:, orcid.org1:)
+  wasAttributedTo(bioprov.poli.usp.br35:, www.prism.oregonstate.edu:)
+  wasDerivedFrom(bioprov.poli.usp.br19:, bioprov.poli.usp.br38:, -, -, -)
+  wasDerivedFrom(bioprov:entities/bcffd775-b82c-4720-91b2-c20d61461a41, bioprov:entities/064fbe14-c520-485c-9958-6b57407f2bfc, -, -, -)
+  wasDerivedFrom(bioprov.poli.usp.br37:, bioprov:entities/bcffd775-b82c-4720-91b2-c20d61461a41, -, -, -)
+  wasDerivedFrom(www.uc-ciee.org:, bioprov.poli.usp.br44:, -, -, -)
+  wasDerivedFrom(bioprov.poli.usp.br19:, bioprov.poli.usp.br36:, -, -, -)
+  wasDerivedFrom(bioprov.poli.usp.br7:, www.uc-ciee.org:, -, -, -)
+  wasDerivedFrom(bioprov.poli.usp.br28:, bioprov.poli.usp.br31:, -, -, -)
+  wasDerivedFrom(gitlab.com:, cran.rstudio.com:, -, -, -)
+  wasGeneratedBy(bioprov.poli.usp.br19:, bioprov.poli.usp.br22:, -)
+  wasGeneratedBy(bioprov.poli.usp.br38:, bioprov.poli.usp.br16:, -)
+  wasGeneratedBy(bioprov.poli.usp.br28:, bioprov.poli.usp.br14:, -)
+  wasGeneratedBy(bioprov.poli.usp.br31:, bioprov.poli.usp.br3:, -)
+  wasGeneratedBy(bioprov.poli.usp.br36:, bioprov.poli.usp.br2:, -)
+  wasGeneratedBy(bioprov:entities/bcffd775-b82c-4720-91b2-c20d61461a41, bioprov.poli.usp.br20:, -)
+  wasGeneratedBy(bioprov.poli.usp.br33:, bioprov.poli.usp.br5:, -)
+  wasGeneratedBy(bioprov:entities/064fbe14-c520-485c-9958-6b57407f2bfc, bioprov.poli.usp.br11:, -)
+  wasGeneratedBy(bioprov.poli.usp.br37:, bioprov.poli.usp.br1:, -)
+  wasInformedBy(bioprov.poli.usp.br22:, bioprov.poli.usp.br:)
+endDocument

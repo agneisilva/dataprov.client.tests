@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+./provenance_entity_png*
+./provenance_entity_rdf*

@@ -1,0 +1,33 @@
+[General]
+Creator=DIVA-GIS
+Created=20151027
+Title=bio12
+
+[GeoReference]
+Projection=
+Datum=
+Mapunits=
+Columns=186
+Rows=192
+MinX=-125
+MaxX=-32
+MinY=-56
+MaxY=40
+ResolutionX=0.5
+ResolutionY=0.5
+
+[Data]
+DataType=FLT4S
+MinValue=0
+MaxValue=7682
+NoDataValue=-3.4E38
+Transparent=0
+Units=
+
+[Legend]
+NoDataColor=0
+NoDataLabel=No Data
+
+[Application]
+Opt0=Imported ASCII data from: C:\modelos\R\clima\bio12.asc
+

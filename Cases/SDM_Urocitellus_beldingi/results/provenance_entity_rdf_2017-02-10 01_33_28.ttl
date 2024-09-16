@@ -1,0 +1,63 @@
+@prefix arctos.database.museum: <http://arctos.database.museum/> .
+@prefix bioprov: <http://bioprov.poli.usp.br/> .
+@prefix cefa.dri.edu: <http://www.cefa.dri.edu/> .
+@prefix dbpedia: <http://dbpedia.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix desp.ucdavis.edu: <http://desp.ucdavis.edu/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix homepages.inf.ed.ac.uk: <http://homepages.inf.ed.ac.uk/> .
+@prefix ib_usp: <http://ib.usp.br/> .
+@prefix manisnet.org: <http://manisnet.org/> .
+@prefix orcid: <http://orcid.org/> .
+@prefix poli: <http://poli.usp.br/> .
+@prefix prism.oregonstate.edu: <http://www.prism.oregonstate.edu/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sensor.com: <http://sensor.com/> .
+@prefix teste: <http://teste.com/> .
+@prefix tools.com: <http://tools.com/> .
+@prefix uc-ciee: <http://www.uc-ciee.org/> .
+@prefix usp: <http://usp.br/> .
+@prefix worldclim: <http://worldclim.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bioprov.poli.usp.br/mapmodels/Urocitellus_beldingi> a prov:Entity ;
+    bioprov:entityFormat "RasterFile" ;
+    bioprov:entityType "DataResource" ;
+    dcterms:created "2017-02-10 01:33:25" ;
+    dcterms:identifier "SDM_Map" ;
+    dcterms:source <https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/raw/master/ex1_oBeech_modern_randomBg_r/Urocitellus_beldingi_map_modern.tif> ;
+    dcterms:title "Raster Map of Species Distribution Modeling" ;
+    dcterms:type "StillImage" ;
+    prov:wasAttributedTo <http://orcid.org/0000-0002-1244-9126>,
+        <http://orcid.org/0000-0003-4627-0244> ;
+    prov:wasDerivedFrom <http://bioprov.poli.usp.br/model/Urocitellus_beldingi> .
+
+<http://bioprov.poli.usp.br/model/Urocitellus_beldingi> a prov:Entity ;
+    bioprov:entityFormat "Archive" ;
+    bioprov:entityType "DataResource" ;
+    dcterms:created "2017-02-10 01:33:15" ;
+    dcterms:identifier "SDMModel" ;
+    dcterms:source <https://gitlab.com/daniellins/SDM_Urocitellus_beldingi/tree/master/ex1_oBeech_modern_randomBg_r/> ;
+    dcterms:subject "http://orcid.org/0000-0003-4627-0244" ;
+    dcterms:title "Resulting Model from MAXENT" ;
+    prov:wasAttributedTo <http://orcid.org/0000-0002-1244-9126> .
+
+<http://orcid.org/0000-0003-4627-0244> a prov:Agent ;
+    dcterms:created "2017-02-10 01:31:09" ;
+    dcterms:identifier "andrefilipe" ;
+    rdfs:seeAlso <http://bioprov.poli.usp.br/students/8788438> ;
+    foaf:mbox <mailto:andrefmb@usp.br> ;
+    foaf:name "Andre Filipe de Moraes Batista" .
+
+<http://orcid.org/0000-0002-1244-9126> a prov:Agent ;
+    dcterms:created "2017-02-10 01:31:09" ;
+    dcterms:identifier "daniellins" ;
+    rdfs:seeAlso <http://bioprov.poli.usp.br/students/6613529> ;
+    foaf:mbox <mailto:daniellins@usp.br> ;
+    foaf:name "Daniel Lins da Silva" .
+
+

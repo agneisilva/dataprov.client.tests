@@ -1,0 +1,8 @@
+Data Cleaning Criteria:
+1. Retained records from the entire conterminous US west of the eastern border of the Rocky Mountains;
+2. Retained records With coordinate uncertainty >5000 m;
+3. Removed records that were below the 0.25th and above the 99.75th percentiles in either mean annual temperature or precipitation relative to the other sites where the species was located;
+4. Removed records collected before year 2000 with coordinate uncertainties <3 m;
+5. Removed records from 2000 onward with coordinate uncertainties >200 m;
+6. Removed records outside the known species distribution area;
+7. Records were thinned so that no presence points were within 1km of one another.

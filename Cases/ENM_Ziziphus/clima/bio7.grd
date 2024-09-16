@@ -1,0 +1,66 @@
+[General]
+Creator=DIVA-GIS
+Created=20151027
+Title=bio7
+
+[GeoReference]
+Projection=
+Datum=
+Mapunits=
+Columns=186
+Rows=192
+MinX=-125
+MaxX=-32
+MinY=-56
+MaxY=40
+ResolutionX=0.5
+ResolutionY=0.5
+
+[Data]
+DataType=FLT4S
+MinValue=60
+MaxValue=461
+NoDataValue=-3.4E38
+Transparent=0
+Units=
+
+[Application]
+Opt0=Imported ASCII data from: C:\modelos\R\clima\bio7.asc
+
+[ContLegend]
+Count=2
+Color1=16711680
+Value1=60
+Label1=
+Color2=255
+Value2=461
+Label2=
+
+[Legend]
+Count=5
+Color1=32768
+Min1=60
+Max1=140
+Label1=60.0 - 140.0
+Color2=65280
+Min2=140
+Max2=220
+Label2=140.0 - 220.0
+Color3=65535
+Min3=220
+Max3=301
+Label3=220.0 - 301.0
+Color4=38655
+Min4=301
+Max4=381
+Label4=301.0 - 381.0
+Color5=255
+Min5=381
+Max5=461
+Label5=381.0 - 461.0
+Transparent=0
+NoDataColor=0
+NoDataLabel=No Data
+isContinuous=0
+SpacedByColor=0
+

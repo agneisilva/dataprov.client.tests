@@ -1,0 +1,201 @@
+@prefix arctos.database.museum: <http://arctos.database.museum/> .
+@prefix bioprov: <http://bioprov.poli.usp.br> .
+@prefix cefa.dri.edu: <http://www.cefa.dri.edu/> .
+@prefix cran.r-project.org: <http://cran.r-project.org/> .
+@prefix cran.rstudio.com: <http://cran.rstudio.com/> .
+@prefix dbpedia: <http://dbpedia.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix desp.ucdavis.edu: <http://desp.ucdavis.edu/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix github: <https://github.com/> .
+@prefix gitlab: <https://gitlab.com/> .
+@prefix homepages.inf.ed.ac.uk: <http://homepages.inf.ed.ac.uk/> .
+@prefix ib_usp: <http://ib.usp.br/> .
+@prefix manisnet.org: <http://manisnet.org/> .
+@prefix orcid: <http://orcid.org/> .
+@prefix poli: <http://poli.usp.br/> .
+@prefix prism.oregonstate.edu: <http://www.prism.oregonstate.edu/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ropensci.org: <http://ropensci.org/> .
+@prefix rstudio: <http://www.rstudio.com/> .
+@prefix sensor.com: <http://sensor.com/> .
+@prefix teste: <http://teste.com/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix tools.com: <http://tools.com/> .
+@prefix uc-ciee: <http://www.uc-ciee.org/> .
+@prefix ucdavis.edu: <http://desp.ucdavis.edu/> .
+@prefix usp: <http://usp.br/> .
+@prefix worldclim: <http://www.worldclim.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://bioprov.poli.usp.br/models/ziziphusJuazeiro> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:15" ;
+    dcterms:identifier "http://bioprov.poli.usp.br/models/ziziphusJuazeiro" ;
+    dcterms:source <https://gitlab.com/daniellins/R_functions/blob/master/ENM_result_ziziphus.jpg> ;
+    dcterms:title "Map with the final result of SDM experiment" ;
+    dcterms:type "rasterLayer" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529>,
+        <http://bioprov.poli.usp.br/agents/8788438> ;
+    prov:wasDerivedFrom <http://bioprov.poli.usp.br/entities/90a9b45e-247a-4e62-8257-b0666c2b00e1> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/Improvement> .
+
+<http://bioprov.poli.usp.br/Improvement> a prov:Activity ;
+    dcterms:created "2017-04-23 02:06:15" ;
+    dcterms:title "Map Improvement using Reclassify function of RASTER package" ;
+    dcterms:type "Improvement" ;
+    rdfs:seeAlso <https://www.rdocumentation.org/packages/raster/versions/2.5-2/topics/reclassify> ;
+    prov:used <http://bioprov.poli.usp.br/entities/90a9b45e-247a-4e62-8257-b0666c2b00e1> .
+
+<http://bioprov.poli.usp.br/acquisition> a prov:Activity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:title "Retrieving and Preparing Occurrence Records from GBIF" ;
+    dcterms:type "Acquisition" ;
+    prov:used <http://bioprov.poli.usp.br/param/country>,
+        <http://bioprov.poli.usp.br/param/hasCoordinate>,
+        <http://bioprov.poli.usp.br/param/hasGeospatialIssue>,
+        <http://bioprov.poli.usp.br/param/species>,
+        <https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R> .
+
+<http://bioprov.poli.usp.br/agents/8788438> a prov:Agent ;
+    dcterms:created "2017-04-23 02:05:56" ;
+    dcterms:identifier "http://bioprov.poli.usp.br/agents/8788438" ;
+    dcterms:type "Researcher" ;
+    rdfs:seeAlso <http://lattes.cnpq.br/2015345575533420> ;
+    foaf:mbox <mailto:andrefmb@usp.br> ;
+    foaf:name "Andre Filipe de Moraes Batista" .
+
+<http://bioprov.poli.usp.br/analysing> a prov:Activity ;
+    dcterms:created "2017-04-23 02:06:14" ;
+    dcterms:title "Species Distribution Modeling with the Bioclim Algorithm" ;
+    dcterms:type "Analysis" ;
+    prov:used <http://bioprov.poli.usp.br/bioclim_env_layers>,
+        <http://bioprov.poli.usp.br/occ_ziziphus_juazeiro>,
+        <http://cran.r-project.org/web/packages/dismo> .
+
+<http://bioprov.poli.usp.br/bioclim_env_layers> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:14" ;
+    dcterms:description "Environmental Layers from WorldClim Website." ;
+    dcterms:identifier "http://bioprov.poli.usp.br/bioclim_env_layers" ;
+    dcterms:source <https://gitlab.com/daniellins/Prov_ENM_Ziziphus/tree/master/clima> ;
+    dcterms:title "Worldclim Environmental Layers" ;
+    dcterms:type "RasterLayer" ;
+    prov:wasAttributedTo worldclim: .
+
+<http://bioprov.poli.usp.br/occ_ziziphus_juazeiro> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:identifier "http://bioprov.poli.usp.br/occ_ziziphus_juazeiro" ;
+    dcterms:title "Occurrence Dataset of Ziziphus juazeiro in Brazil" ;
+    dcterms:type "Dataset" ;
+    prov:wasAttributedTo <http://gbif.org/> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/acquisition> .
+
+<http://bioprov.poli.usp.br/param/country> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:identifier "country" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "BR" .
+
+<http://bioprov.poli.usp.br/param/hasCoordinate> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:identifier "hasCoordinate" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "TRUE" .
+
+<http://bioprov.poli.usp.br/param/hasGeospatialIssue> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:identifier "hasGeospatialIssue" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "FALSE" .
+
+<http://bioprov.poli.usp.br/param/species> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:identifier "species" ;
+    dcterms:type "InputParameter" ;
+    rdf:value "Ziziphus joazeiro" .
+
+<http://bioprov.poli.usp.br/projecting> a prov:Activity ;
+    dcterms:created "2017-04-23 02:06:15" ;
+    dcterms:title "Projecting model on a map" ;
+    dcterms:type "Projecting" ;
+    prov:used <http://bioprov.poli.usp.br/entities/e670efa0-1e2d-4da8-9f95-360dfb7f7742>,
+        <http://cran.r-project.org/web/packages/raster#plot> .
+
+<http://cran.r-project.org/web/packages/dismo> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:14" ;
+    dcterms:hasVersion "1.0-15" ;
+    dcterms:identifier "Bioclim" ;
+    dcterms:source <http://cran.r-project.org/src/contrib/dismo_1.0-15.tar.gz> ;
+    dcterms:title "BIOCLIM implementation of DISMO package" ;
+    dcterms:type "Software" ;
+    rdfs:seeAlso <http://cran.r-project.org/web/packages/dismo/dismo.pdf>,
+        <http://finzi.psych.upenn.edu/library/dismo/html/bioclim.html> ;
+    prov:wasAttributedTo <http://desp.ucdavis.edu/people/robert-j-hijmans/> .
+
+<http://cran.r-project.org/web/packages/raster#plot> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:15" ;
+    dcterms:hasVersion "2.5-2" ;
+    dcterms:identifier "Plot" ;
+    dcterms:source <http://cran.r-project.org/src/contrib/raster_2.5-2.tar.gz> ;
+    dcterms:title "Plot function of the RASTER package from R Programming Language" ;
+    dcterms:type "Software" ;
+    rdfs:seeAlso <http://cran.r-project.org/web/packages/raster/raster.pdf> ;
+    prov:wasAttributedTo <http://desp.ucdavis.edu/people/robert-j-hijmans> .
+
+<http://cran.rstudio.com/web/packages/rgbif> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:description "Interface to the Global Biodiversity Information Facility API" ;
+    dcterms:identifier "rgbif" ;
+    dcterms:source <http://cran.rstudio.com/web/packages/rgbif/> ;
+    dcterms:title "rgibf" ;
+    dcterms:type "Software" ;
+    prov:wasAttributedTo ropensci.org: .
+
+<http://bioprov.poli.usp.br/entities/90a9b45e-247a-4e62-8257-b0666c2b00e1> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:15" ;
+    dcterms:description "Species Distribution Model projected on the map" ;
+    dcterms:identifier "ZiziphusModelProjection" ;
+    dcterms:title "Species Distribution Model Projection" ;
+    dcterms:type "rasterLayer" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasDerivedFrom <http://bioprov.poli.usp.br/entities/e670efa0-1e2d-4da8-9f95-360dfb7f7742> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/projecting> .
+
+<http://bioprov.poli.usp.br/entities/e670efa0-1e2d-4da8-9f95-360dfb7f7742> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:14" ;
+    dcterms:identifier "ZiziphusModel" ;
+    dcterms:title "Species Distribution Model of the Ziziphus juazeiro" ;
+    dcterms:type "Model" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasGeneratedBy <http://bioprov.poli.usp.br/analysing> .
+
+<http://gbif.org/> a prov:Agent ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:description "The Global Biodiversity Information Facility (GBIF) is an international open data infrastructure." ;
+    dcterms:identifier "GBIF" ;
+    dcterms:type "Institution" ;
+    foaf:homepage <http://gbif.org/> ;
+    foaf:name "Global Biodiversity Information Facility" .
+
+<https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R> a prov:Entity ;
+    dcterms:created "2017-04-23 02:06:12" ;
+    dcterms:identifier "acquisitionAndPreparationFunction" ;
+    dcterms:source <https://gitlab.com/daniellins/R_functions/blob/master/SDM_R_functions.R> ;
+    dcterms:title "GBIF data acquisition and preparation function" ;
+    dcterms:type "Software" ;
+    prov:wasAttributedTo <http://bioprov.poli.usp.br/agents/6613529> ;
+    prov:wasDerivedFrom <http://cran.rstudio.com/web/packages/rgbif> .
+
+<http://bioprov.poli.usp.br/agents/6613529> a prov:Agent ;
+    dcterms:created "2017-04-23 02:05:56" ;
+    dcterms:identifier "http://bioprov.poli.usp.br/agents/6613529" ;
+    dcterms:type "Researcher" ;
+    rdfs:seeAlso <http://lattes.cnpq.br/6502450550040226> ;
+    foaf:mbox <mailto:daniellins@usp.br> ;
+    foaf:name "Daniel Lins da Silva" .
+
+

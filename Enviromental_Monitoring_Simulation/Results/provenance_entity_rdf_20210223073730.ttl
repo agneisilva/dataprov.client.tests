@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ib_usp: <http://ib.usp.br/> .
+@prefix poli: <http://poli.usp.br/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix usp: <http://usp.br/> .
+
+<http://ib.usp.br/data_products/150> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:11" ;
+    dcterms:source "http://ib.usp.br/data_products/150" ;
+    dcterms:title "Environmental Monitoring Published Data" ;
+    dcterms:type "Processed Dataset" ;
+    prov:wasAttributedTo ib_usp:ecologia ;
+    prov:wasGeneratedBy <http://ib.usp.br/activities/processing> .
+
+<http://bioprov.org/input_params/acceptErrors> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:11" ;
+    dcterms:description "Set whether the errors are discarded or maintained" ;
+    dcterms:type "InputParams" ;
+    rdf:value "FALSE" .
+
+<http://bioprov.org/input_params/interval> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:10" ;
+    dcterms:description "Parameter of data capture interval, in minutes." ;
+    dcterms:type "InputParams" ;
+    rdf:value "60" .
+
+<http://bioprov.org/input_params/validateRanges> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:11" ;
+    dcterms:description "Set wether the validation of data ranges are considered." ;
+    dcterms:type "InputParams" ;
+    rdf:value "TRUE" .
+
+<http://ib.usp.br/activities/processing> a prov:Activity ;
+    dcterms:created "2021-02-23 07:37:11" ;
+    dcterms:title "Environment Data Processing using Software Tool" ;
+    dcterms:type "DataProcessing" ;
+    prov:used <http://bioprov.org/input_params/acceptErrors>,
+        <http://bioprov.org/input_params/validateRanges>,
+        <http://poli.usp.br/datascience/algol/10>,
+        <http://poli.usp.br/datasets/30>,
+        <http://tools.com/software/xyz> ;
+    prov:wasAssociatedWith ib_usp:ecologia .
+
+<http://poli.usp.br/activities/capture> a prov:Activity ;
+    dcterms:created "2021-02-23 07:37:10" ;
+    dcterms:title "Environment Data Capture by Sensors" ;
+    dcterms:type "DataCapturing" ;
+    prov:used <http://bioprov.org/input_params/interval>,
+        <http://sensor.com/environmentalsensor/env200> ;
+    prov:wasAssociatedWith usp:poli .
+
+<http://poli.usp.br/datascience/algol/10> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:11" ;
+    dcterms:source "http://github.com/poli-usp/environAlgol" ;
+    dcterms:title "Algorithm for environmental processing" .
+
+<http://poli.usp.br/datasets/30> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:10" ;
+    dcterms:source "http://poli.usp.br/datasets/30" ;
+    dcterms:title "Environmental Monitoring Raw Data" ;
+    dcterms:type "Raw Dataset" ;
+    prov:wasAttributedTo usp:poli ;
+    prov:wasGeneratedBy <http://poli.usp.br/activities/capture> .
+
+<http://sensor.com/environmentalsensor/env200> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:10" ;
+    dcterms:source "http://sensor.com/environmentalsensor/env200" ;
+    dcterms:title "Environmental Sensor Model ENV 200" ;
+    dcterms:type "Sensor" .
+
+<http://tools.com/software/xyz> a prov:Entity ;
+    dcterms:created "2021-02-23 07:37:11" ;
+    dcterms:title "Software Tool XYZ" ;
+    dcterms:type "SoftwareTool" .
+
+usp:poli a prov:Agent ;
+    dcterms:created "2021-02-23 07:37:10" ;
+    dcterms:description "Engineering Departament of University of Sao Paulo." ;
+    dcterms:type "Institution" ;
+    foaf:homepage poli: ;
+    foaf:name "Escola Politecnica da USP" .
+
+ib_usp:ecologia a prov:Agent ;
+    dcterms:created "2021-02-23 07:37:10" ;
+    dcterms:description "Ecology Department - Bioscience Instituty of University of Sao Paulo" ;
+    foaf:homepage ib_usp:ecologia ;
+    foaf:name "Departamento de Ecologia do Instituto de Biociencias da USP" .
+
+
