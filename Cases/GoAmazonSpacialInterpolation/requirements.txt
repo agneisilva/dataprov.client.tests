@@ -1,0 +1,8 @@
+matplotlib==3.3.2
+numpy==1.25.2
+pandas
+scikit-learn
+scipy
+imbalanced-learn
+imblearn
+more-itertools
